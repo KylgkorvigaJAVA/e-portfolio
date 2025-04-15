@@ -1,0 +1,74 @@
+/* 
+Header: #f09819 (Code Orange)???
+Header: #ffb752 (Light Orange)
+Text: #7efff5 (Aqua)
+BG main: #252525 (Charcoal)
+BG secondary: #1d1d1d (Deep Gray)
+BG dark: #0f0f0f (Near Black)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Iceberg&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nabla&family=Stalinist+One&display=swap');
+
+.html ,body {
+    background-color: #252525;
+    color: #7efff5;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.bg-second {
+    background-color: #1d1d1d;
+}
+
+.bg-darkest {
+    background-color: #0f0f0f;
+}
+
+#hero {
+    height: 100vh;
+}
+
+.nav-menu {
+    color:#38ef7d;
+}
+
+.nav-item a{
+    color: #38ef7d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav-link:hover{
+    color: #a4fcc5;
+}
+
+.nav-link.active{
+    color: #a4fcc5 !important;
+}
+
+.hero-title {
+    color:#ffb752;
+}
+
+.test3 {
+    color:#7efff5;
+}
+
+/* typewriter test */
+
+.cursor {
+    display: none; /* Hidden initially */
+    margin-left: 3px;
+    width: 2px;
+    height: 1.2rem;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
