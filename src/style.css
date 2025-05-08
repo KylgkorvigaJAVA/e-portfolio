@@ -216,18 +216,19 @@ h1 {
     color: #a4fcc5;
 }
 
-.navbar {
+.navbar-nav {
     background: none;
     height: 20px;
 }
 
-.nav-item a{
+.nav-link{
     color: #38ef7d;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
+
 .nav-link:hover{
     color: #a4fcc5;
 }
