@@ -17,7 +17,6 @@ Space Grotesk
 
 html {
     color: #7efff5;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -280,6 +279,7 @@ h1 {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 @keyframes fadeInArrow {
