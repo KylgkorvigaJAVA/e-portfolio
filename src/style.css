@@ -19,10 +19,29 @@ html ,body {
     background-color: #252525;
     color: #7efff5;
     font-family: 'JetBrains Mono', monospace;
+    scroll-behavior: smooth;
 }
 
-section {
-    height: 100vh;
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+}
+
+h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 3rem;
+    color: #ffb752;
+}
+
+#contact {
+    position: relative;
+}
+
+#hero p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #7efff5;
 }
 
 .bg-second {
@@ -33,20 +52,29 @@ section {
     background-color: #0f0f0f;
 }
 
-#hero p {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.2rem;
-    color: #7efff5;
+.cursor {
+    display: none;
+    margin-left: 3px;
+    width: 2px;
+    height: 1.2rem;
+    animation: blink 1s infinite;
 }
-
+  
 .hero-title {
-    color:#38ef7d;
+    height: 200px;
 }
 
-h1 {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 3rem;
-    color: #ffb752;
+.footer-cursor {
+    display: inline-block;
+    margin-left: 1px;
+    width: 2px;
+    animation: blink 1s infinite;
+}
+
+.footer-text {
+    color: #38ef7d;
+    text-align: center;
+    height: 1rem;
 }
 
 .nav-menu {
@@ -73,27 +101,18 @@ h1 {
     color: #a4fcc5 !important;
 }
 
-.footer-text {
-    color: #38ef7d;
-    text-align: center;
-    height: 1rem;
+.snap-section {
+    height:100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
-
-.footer-cursor {
-    display: inline-block;
-    margin-left: 1px;
-    width: 2px;
-    animation: blink 1s infinite;
-}
-
-.cursor {
-    display: none; /* Hidden initially */
-    margin-left: 3px;
-    width: 2px;
-    height: 1.2rem;
-    animation: blink 1s infinite;
-  }
   
+.snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
   @keyframes blink {
     0%, 100% {
       opacity: 1;
