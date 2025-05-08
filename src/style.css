@@ -169,7 +169,7 @@ h1 {
 
 @media (max-width: 768px) {
     .snap-container {
-        scroll-snap-type: none;
+        scroll-snap-type: y proximity;
     }
 }
 
