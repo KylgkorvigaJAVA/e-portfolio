@@ -77,4 +77,55 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollHint.style.display = 'block';
         }
     });
+
+    // sidenav + nav-icon logic
+    const navBtn = document.getElementById('navBtn');
+    const sideNav = document.getElementById('sideNav');
+    const navLinks = document.querySelectorAll('#sideNav .nav-link');
+
+    sideNav.addEventListener('show.bs.offcanvas', function () {
+        navBtn.classList.add('is-active');
+    });
+
+    sideNav.addEventListener('hide.bs.offcanvas', function () {
+        navBtn.classList.remove('is-active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            const bsOffcanvas = bootstrap.Offcanvas.getInstance(sideNav);
+            if (bsOffcanvas) {
+                bsOffcanvas.hide();
+            }
+
+            navLinks.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    function setActiveLink() {
+        const sections = document.querySelectorAll('section');
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                const targetId = section.getAttribute('id');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+
+                    if (link.getAttribute('href') === `#${targetId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+
+    setActiveLink();
+
+    window.addEventListener('scroll', setActiveLink);
 });

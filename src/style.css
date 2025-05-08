@@ -154,6 +154,62 @@ h1 {
 
 .nav-btn {
     color: #38ef7d;
+    position: fixed;
+    background:none;
+    top: 20px;
+    right: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1060;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon .line {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #38ef7d;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.nav-icon .line-1 {
+    top: 0;
+}
+
+.nav-icon .line-2 {
+    top: 8px;
+}
+
+.nav-icon .line-3 {
+    top: 16px;
+}
+
+.nav-btn.is-active .nav-icon .line-1 {
+    top: 8px;
+    transform: rotate(45deg);
+}
+
+.nav-btn.is-active .nav-icon .line-2 {
+    opacity: 0;
+}
+
+.nav-btn.is-active .nav-icon .line-3 {
+    top: 8px;
+    transform: rotate(-45deg);
 }
 
 .nav-btn:hover {
