@@ -75,11 +75,11 @@ document.addEventListener('DOMContentLoaded', function () {
     updateScrollHint();
 
 
-    // === sidenav on/off ===
-
+    // === sidenav on/off and active states ===
     const navBtn = document.getElementById('navBtn');
     const sideNav = document.getElementById('sideNav');
     const navLinks = document.querySelectorAll('#sideNav .nav-link');
+    const desktopLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     sideNav.addEventListener('show.bs.offcanvas', () => navBtn.classList.add('is-active'));
     sideNav.addEventListener('hide.bs.offcanvas', () => navBtn.classList.remove('is-active'));
@@ -88,32 +88,23 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', function () {
             const bsOffcanvas = bootstrap.Offcanvas.getInstance(sideNav);
             if (bsOffcanvas) bsOffcanvas.hide();
-
-            navLinks.forEach(item => item.classList.remove('active'));
-            this.classList.add('active');
         });
     });
 
-
-    // === sidenav navigation ===
-
-    function setActiveLink() {
-        const sections = document.querySelectorAll('section');
-        const scrollY = window.scrollY;
-
-        sections.forEach(section => {
-            const top = section.offsetTop - 100;
-            const bottom = top + section.offsetHeight;
-
-            if (scrollY >= top && scrollY < bottom) {
-                const id = section.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-                });
+    function syncNavLinks() {
+        desktopLinks.forEach((desktopLink, index) => {
+            if (desktopLink.classList.contains('active')) {
+                navLinks[index].classList.add('active');
+            } else {
+                navLinks[index].classList.remove('active');
             }
         });
     }
 
-    window.addEventListener('scroll', setActiveLink);
-    setActiveLink();
+    const observer = new MutationObserver(syncNavLinks);
+    desktopLinks.forEach(link => {
+        observer.observe(link, { attributes: true, attributeFilter: ['class'] });
+    });
+
+    syncNavLinks();
 });
