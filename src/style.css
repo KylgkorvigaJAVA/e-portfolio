@@ -40,6 +40,26 @@ h1 {
     color: #ffb752;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color:#38ef7d;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    color:#a4fcc5
+}
+
 #contact {
     position: relative;
 }
@@ -160,11 +180,40 @@ h1 {
     scroll-snap-stop: always;
     overflow-y: auto;
 }
-  
+
+.scroll-hint {
+    color: #38ef7d;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    opacity: 0;
+    animation: fadeInArrow 5s ease 6s forwards, bounceArrow 1.5s infinite;
+}
+
 .snap-container {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
+}
+
+@keyframes fadeInArrow {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceArrow {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
 }
 
 @media (max-width: 768px) {

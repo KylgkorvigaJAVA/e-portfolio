@@ -36,9 +36,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeWriterH1();
 
+    // card flip effect
     document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('click', () => {
             card.classList.toggle('flipped');
         });
     });
+
+    //back to top logic
+    const backToTop = document.getElementById('back-to-top');
+    const snapContainer = document.querySelector('.snap-container');
+
+    function updateBackToTopVisibility() {
+        if (snapContainer.scrollTop > window.innerHeight * 1.5) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+
+    updateBackToTopVisibility();
+
+    snapContainer.addEventListener('scroll', updateBackToTopVisibility);
+
+    backToTop.addEventListener('click', () => {
+        document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+
+        backToTop.classList.remove('visible');
+    });
+
+    // scroll hint logic
+    const scrollHint = document.querySelector('.scroll-hint');
+    const heroSection = document.getElementById('hero');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                scrollHint.style.display = 'block';
+            } else {
+                scrollHint.style.display = 'none';
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(heroSection);
 });
