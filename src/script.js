@@ -67,17 +67,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // scroll hint logic
     const scrollHint = document.querySelector('.scroll-hint');
-    const heroSection = document.getElementById('hero');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                scrollHint.style.display = 'block';
-            } else {
-                scrollHint.style.display = 'none';
-            }
-        });
-    }, { threshold: 0.5 });
+    scrollHint.style.display = 'block';
 
-    observer.observe(heroSection);
+    snapContainer.addEventListener('scroll', () => {
+        if (snapContainer.scrollTop > 0) {
+            scrollHint.style.display = 'none';
+        } else {
+            scrollHint.style.display = 'block';
+        }
+    });
 });
