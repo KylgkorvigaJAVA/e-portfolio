@@ -152,6 +152,14 @@ h1 {
     color:#38ef7d;
 }
 
+.nav-btn {
+    color: #38ef7d;
+}
+
+.nav-btn:hover {
+    color: #a4fcc5;
+}
+
 .navbar {
     background: none;
     height: 20px;
@@ -170,6 +178,25 @@ h1 {
 
 .nav-link.active{
     color: #a4fcc5 !important;
+}
+
+.offcanvas {
+    max-width: 230px;
+    background-color: #0f0f0f;
+}
+
+.offcanvas .nav-link {
+    color: #38ef7d;
+    font-weight: 500;
+    padding: 12px 15px;
+    transition: all 0.2s ease;
+    border-radius: 5px;
+    margin: 3px 0;
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link.active {
+    color: #a4fcc5;
 }
 
 .snap-section {
