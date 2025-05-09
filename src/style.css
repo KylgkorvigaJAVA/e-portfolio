@@ -87,6 +87,10 @@ h1 {
     transition: transform 0.3s ease;
 }
 
+.card-container {
+    margin-top: 120px;
+}
+
 .card:hover {
     transform: translateY(-10px) scale(1.03);
 }
