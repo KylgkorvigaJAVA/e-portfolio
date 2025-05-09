@@ -83,8 +83,13 @@ h1 {
     cursor: pointer;
     background: transparent;
     border: none;
-    height: 300px;
-  }
+    height: 500px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
 
 .card-inner {
     position: relative;
@@ -110,6 +115,7 @@ h1 {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 0.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-front {
@@ -303,6 +309,10 @@ h1 {
 @media (max-width: 768px) {
     .snap-container {
         scroll-snap-type: y proximity;
+    }
+
+    .card {
+        height: 300px;
     }
 }
 
