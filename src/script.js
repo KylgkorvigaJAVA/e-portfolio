@@ -35,8 +35,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // === card flip ===
 
     document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.toggle('flipped');
+        let isFlipped = false;
+
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a') && isFlipped) {
+                return;
+            }
+
+            if (!isFlipped) {
+                card.classList.add('flipped');
+                isFlipped = true;
+            }
         });
     });
 
