@@ -1,3 +1,5 @@
+/* MADE WITH AI! */
+
 const skills = [
     { icon: 'src/img/skill_icons/html.webp' },
     { icon: 'src/img/skill_icons/css.webp' },
@@ -145,5 +147,3 @@ function animate() {
 
     requestAnimationFrame(update);
 }
-
-// Note: Reset button functionality has been removed
