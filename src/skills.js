@@ -2,11 +2,12 @@ const skills = [
     { icon: 'src/img/skill_icons/html.webp' },
     { icon: 'src/img/skill_icons/css.webp' },
     { icon: 'src/img/skill_icons/javascript.webp' },
-    { icon: '/api/placeholder/60/60' },
-    { icon: '/api/placeholder/60/60' },
-    { icon: '/api/placeholder/60/60' },
-    { icon: '/api/placeholder/60/60' },
-    { icon: '/api/placeholder/60/60' }
+    { icon: 'src/img/skill_icons/sql.webp' },
+    { icon: 'src/img/skill_icons/react.webp' },
+    { icon: 'src/img/skill_icons/github.webp' },
+    { icon: 'src/img/skill_icons/vsc.webp' },
+    { icon: 'src/img/skill_icons/figma.webp' },
+    { icon: 'src/img/skill_icons/ps.webp' }
 ];
 
 // Physics constants
@@ -51,11 +52,10 @@ function createBall(skillEl, skill) {
     ball.className = 'ball';
     ball.innerHTML = `<img src="${skill.icon}" alt="">`;
 
-    // Remove background color
-    ball.style.backgroundColor = 'transparent';
-
     // Size and position
-    const size = 100;
+    const isMobile = window.innerWidth <= 768;
+    const size = isMobile ? 60 : 100;
+
     ball.style.width = `${size}px`;
     ball.style.height = `${size}px`;
 
