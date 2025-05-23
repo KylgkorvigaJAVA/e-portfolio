@@ -92,12 +92,40 @@ h2 {
     transform: scale(1.02);
 }
 
+.btn-send {
+    border:#38ef7d solid 2px;
+    color: #38ef7d;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-send:hover {
+    border:#a4fcc5 solid 2px;
+    color: #a4fcc5;
+}
+
 .bg-second {
     background-color: #1d1d1d;
 }
 
 .bg-darkest {
     background-color: #0f0f0f;
+}
+
+.contact-links a {
+    color: #38ef7d;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin:25px;
+}
+
+.contact-links a:hover {
+    color: #a4fcc5;
+    transform: scale(1.2);
+}
+
+.contact-container {
+    padding-top: 130px;
 }
 
 .cursor {
@@ -186,6 +214,14 @@ h2 {
     .about-text {
         order: 2;
         text-align: center;
+    }
+
+    .contact-container {
+        padding: 50px 0;
+    }
+
+    .contact-links a {
+        margin-left:5px;
     }
 }
 
