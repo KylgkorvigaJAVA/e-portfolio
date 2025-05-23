@@ -39,6 +39,14 @@ h1 {
     color: #ffb752;
 }
 
+p {
+    color: #7efff5;
+}
+
+h2 {
+    color:#38ef7d;
+}
+
 #back-to-top {
     position: fixed;
     bottom: 30px;
@@ -67,6 +75,21 @@ h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.2rem;
     color: #7efff5;
+}
+
+.about-container {
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-img img {
+    max-width: 70%;
+    transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+    transform: scale(1.02);
 }
 
 .bg-second {
@@ -150,6 +173,21 @@ h1 {
 @media (max-width: 768px) {
     .snap-container {
         scroll-snap-type: y proximity;
+    }
+
+    .about-container {
+        padding-top: 30px;
+    }
+
+    .about-img {
+        order: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-text {
+        order: 2;
+        text-align: center;
     }
 }
 
