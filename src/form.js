@@ -12,7 +12,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         });
 
     (function () {
-        emailjs.init("0sx78NiymcpZL-Ajw");
+        emailjs.init('0sx78NiymcpZL-Ajw');
     })();
 });
 
