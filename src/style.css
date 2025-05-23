@@ -180,9 +180,7 @@ h2 {
     }
 
     .about-img {
-        order: 1;
-        display: flex;
-        justify-content: center;
+        display: none;
     }
     
     .about-text {
