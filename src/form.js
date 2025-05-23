@@ -10,8 +10,9 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             alert('Failed to send message. Please try again.');
             console.error('EmailJS error:', error);
         });
+
+    (function () {
+        emailjs.init("0sx78NiymcpZL-Ajw");
+    })();
 });
 
-(function () {
-    emailjs.init("0sx78NiymcpZL-Ajw");
-})();
