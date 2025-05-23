@@ -116,4 +116,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     syncNavLinks();
+
 });
