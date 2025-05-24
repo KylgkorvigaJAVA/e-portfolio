@@ -116,7 +116,8 @@ h2 {
     font-size: 1.5rem;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
-    margin:25px;
+    margin-top:50px;
+    margin-right:25px;
 }
 
 .contact-links a:hover {
