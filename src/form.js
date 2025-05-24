@@ -5,7 +5,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         .then(() => {
             alert('Message sent successfully!');
             console.log('EmailJS success:', response);
-            this.reset(); // clear form
+            this.reset();
         }, (error) => {
             alert('Failed to send message. Please try again.');
             console.error('EmailJS error:', error);

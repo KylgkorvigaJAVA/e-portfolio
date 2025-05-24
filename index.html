@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/cards.css">
     <link rel="stylesheet" href="src/nav.css">
     <link rel="stylesheet" href="src/skills.css">
+    <link rel="stylesheet" href="src/copy.css">
     <title>E-Portfolio | Kaspar</title>
 </head>
 <body>
@@ -211,8 +212,15 @@
                         <div class="contact-info">
                             <h2 class="mb-4">Contact me</h2>
                             <div>
-                                <p><i class="fa-solid fa-envelope"></i> kaspar.viitkar@voco.ee</p>
-                                <p><i class="fa-solid fa-phone"></i> +37256993637</p>
+                                <p class="copy-item" data-copy="kaspar.viitkar@voco.ee">
+                                    <i class="fa-solid fa-envelope"></i> kaspar.viitkar@voco.ee
+                                    <span class="copy-tooltip">Click to copy</span>
+                                </p>
+                                <br>
+                                <p class="copy-item" data-copy="+37256993637">
+                                    <i class="fa-solid fa-phone"></i> +37256993637
+                                    <span class="copy-tooltip">Click to copy</span>
+                                </p>
                             </div>
                             <div class="contact-links">
                                 <a href="https://www.linkedin.com/in/kaspar-viitkar-534197244/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
@@ -258,5 +266,6 @@
     <script src="src/script.js"></script>
     <script src="src/skills.js"></script>
     <script src="src/form.js"></script>
+    <script src="src/copy.js"></script>
 </body>
 </html>

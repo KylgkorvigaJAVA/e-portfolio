@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function typeWriterH1() {
         if (i < textH1.length) {
             typingElementH1.innerHTML += textH1.charAt(i++);
-            setTimeout(typeWriterH1, 80);
+            setTimeout(typeWriterH1, 40);
         } else {
             i = 0;
             setTimeout(typeWriterP, 400);
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function typeWriterP() {
         if (i < textP.length) {
             typingElementP.innerHTML += textP.charAt(i++);
-            setTimeout(typeWriterP, 70);
+            setTimeout(typeWriterP, 40);
         } else {
             cursor.style.display = "inline-block";
         }
