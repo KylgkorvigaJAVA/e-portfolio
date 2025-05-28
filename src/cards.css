@@ -44,6 +44,18 @@
     text-align: center;
 }
 
+.card-back-btn {
+    background: transparent;
+    border: none;
+    color: #38ef7d;
+    cursor: pointer;
+    margin: 15px;
+}
+
+.card-back-btn:hover {
+    color: #a4fcc5;
+}
+
 .card-back-links {
     width: 100%;
     height: 30%;

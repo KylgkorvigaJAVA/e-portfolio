@@ -38,9 +38,12 @@ document.addEventListener('DOMContentLoaded', function () {
         let isFlipped = false;
 
         card.addEventListener('click', (e) => {
-            if (e.target.closest('a') && isFlipped) {
+            if (e.target.closest('.card-back-btn')) {
+                card.classList.remove('flipped');
+                isFlipped = false;
                 return;
             }
+            if (e.target.closest('a') && isFlipped) return;
 
             if (!isFlipped) {
                 card.classList.add('flipped');
