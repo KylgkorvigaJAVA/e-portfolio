@@ -37,6 +37,15 @@
   transform: scale(1.1);
 }
 
+.skills-header {
+  display: flex;
+  align-items: center;
+}
+
+.skills-header h1 {
+    margin: 0;
+}
+
 .skill-icon {
   width: 100px;
   height: 100px;

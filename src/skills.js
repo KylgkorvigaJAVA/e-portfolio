@@ -10,10 +10,11 @@ const skills = [
     { icon: 'src/img/skill_icons/ps.webp' }
 ];
 
-const gravity = 0.4;
+const gravity = 0.2;
 const friction = 0.99;
 const bounce = 0.7;
 const speedThreshold = 0.5;
+const resetBtn = document.getElementById('reset-skills');
 
 const container = document.getElementById('skills');
 const grid = document.getElementById('skills-grid');
@@ -62,16 +63,30 @@ function createBall(skillEl, skill) {
         vy: -5,
         size: size,
         spinning: true,
-        currentRotation: 0
+        currentRotation: 0,
+        originalIndex: parseInt(skillEl.dataset.index)
     };
 
     balls.push(ballObj);
     container.appendChild(ball);
 
     if (balls.length === 1) {
+        resetBtn.style.display = 'block';
         animate();
     }
 }
+
+resetBtn?.addEventListener('click', () => {
+    balls.forEach(ball => {
+        ball.el.remove();
+        const originalSkill = document.querySelector(`[data-index="${ball.originalIndex}"]`);
+        if (originalSkill) {
+            originalSkill.style.visibility = 'visible';
+        }
+    });
+    balls.length = 0;
+    resetBtn.style.display = 'none';
+});
 
 function animate() {
     const width = container.clientWidth;
