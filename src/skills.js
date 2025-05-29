@@ -10,7 +10,7 @@ const skills = [
     { icon: 'src/img/skill_icons/ps.webp' }
 ];
 
-const gravity = 0.3;
+const gravity = 0.2;
 const friction = 0.99;
 const bounce = 0.7;
 const speedThreshold = 0.5;
