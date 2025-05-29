@@ -12,19 +12,15 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 });
 
 function showFormNotification(message, type) {
-    // Create notification element
     const notification = document.createElement('div');
     notification.className = `form-notification ${type}`;
     notification.textContent = message;
 
-    // Position it near the form
     const form = document.getElementById('contact-form');
     form.appendChild(notification);
 
-    // Show notification
     setTimeout(() => notification.classList.add('show'), 10);
 
-    // Hide and remove after 3 seconds
     setTimeout(() => {
         notification.classList.remove('show');
         setTimeout(() => form.removeChild(notification), 300);
