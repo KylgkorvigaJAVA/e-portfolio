@@ -96,6 +96,7 @@ h2 {
     border:#38ef7d solid 2px;
     color: #38ef7d;
     transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
 }
 
 .btn-send:hover {
@@ -143,9 +144,9 @@ h2 {
 
 .form-notification {
     position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 110%; /* Position to the right of the button */
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(15, 15, 15, 0.9);
     color: #38ef7d;
     padding: 8px 16px;
@@ -253,6 +254,12 @@ h2 {
 
     .contact-links a {
         margin-left:5px;
+    }
+
+    .form-notification {
+        left: 0;
+        top: 110%;
+        transform: none;
     }
 }
 

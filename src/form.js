@@ -16,8 +16,8 @@ function showFormNotification(message, type) {
     notification.className = `form-notification ${type}`;
     notification.textContent = message;
 
-    const form = document.getElementById('contact-form');
-    form.appendChild(notification);
+    const sendButton = document.querySelector('.btn-send');
+    sendButton.parentNode.appendChild(notification);
 
     setTimeout(() => notification.classList.add('show'), 10);
 
