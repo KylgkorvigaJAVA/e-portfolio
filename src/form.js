@@ -23,6 +23,6 @@ function showFormNotification(message, type) {
 
     setTimeout(() => {
         notification.classList.remove('show');
-        setTimeout(() => form.removeChild(notification), 300);
+        setTimeout(() => sendButton.parentNode.removeChild(notification), 300);
     }, 3000);
 }
