@@ -17,8 +17,8 @@ function showFormNotification(message, type) {
     notification.textContent = message;
 
     // Position it near the form
-    const form = document.getElementById('contact-form');
-    form.appendChild(notification);
+    const sendButton = document.querySelector('.btn-send');
+    sendButton.parentNode.appendChild(notification);
 
     // Show notification
     setTimeout(() => notification.classList.add('show'), 10);
@@ -26,6 +26,6 @@ function showFormNotification(message, type) {
     // Hide and remove after 3 seconds
     setTimeout(() => {
         notification.classList.remove('show');
-        setTimeout(() => form.removeChild(notification), 300);
+        setTimeout(() => sendButton.parentNode.removeChild(notification), 300);
     }, 3000);
 }
