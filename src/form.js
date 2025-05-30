@@ -3,11 +3,20 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
 
     emailjs.sendForm('service_zf1as5l', 'template_83eam1n', this)
         .then(() => {
-            alert('Message sent successfully!');
-            console.log('EmailJS successfully sent the message.');
+            showMessage('Message sent successfully!');
             this.reset();
         }, (error) => {
-            alert('Failed to send message. Please try again.');
-            console.error('EmailJS error:', error);
+            showMessage('Failed to send message!');
         });
 });
+
+function showMessage(text) {
+    const btn = document.querySelector('.btn-send');
+    const msg = document.createElement('span');
+    msg.className = 'form-tooltip';
+    msg.textContent = text;
+    btn.appendChild(msg);
+
+    setTimeout(() => msg.classList.add('show'), 10);
+    setTimeout(() => btn.removeChild(msg), 2000);
+}

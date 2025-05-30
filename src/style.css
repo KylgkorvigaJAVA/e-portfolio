@@ -96,6 +96,7 @@ h2 {
     border:#38ef7d solid 2px;
     color: #38ef7d;
     transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
 }
 
 .btn-send:hover {
@@ -139,6 +140,25 @@ h2 {
   
 .hero-title {
     height: 200px;
+}
+
+.form-tooltip {
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 15, 15, 0.9);
+    color: #38ef7d;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.form-tooltip.show {
+    opacity: 1;
 }
 
 .footer-cursor {
