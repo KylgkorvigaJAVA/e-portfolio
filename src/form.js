@@ -4,7 +4,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     emailjs.sendForm('service_zf1as5l', 'template_83eam1n', this)
         .then(() => {
             alert('Message sent successfully!');
-            console.log('EmailJS success:', response);
+            console.log('EmailJS successfully sent the message.');
             this.reset();
         }, (error) => {
             alert('Failed to send message. Please try again.');
