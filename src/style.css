@@ -161,6 +161,11 @@ h2 {
     opacity: 1;
 }
 
+.form-tooltip.loading {
+    opacity: 1;
+    visibility: visible;
+}
+
 .footer-cursor {
     display: inline-block;
     margin-left: 1px;
