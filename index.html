@@ -18,11 +18,11 @@
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <button class="nav-btn d-lg-none" id="navBtn" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#sideNav">
-            <div class="nav-icon">
+            <span class="nav-icon">
                 <span class="line line-1"></span>
                 <span class="line line-2"></span>
                 <span class="line line-3"></span>
-            </div>
+            </span>
         </button>
         <!-- MOBILE NAV -->
         <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="sideNav">
@@ -73,7 +73,10 @@
     <div class="snap-container" data-bs-spy="scroll" data-bs-target="#navbar">
         <section class="snap-section d-flex align-items-center" id="hero">
             <div class="container text-start hero-title">
-                <h1><span class="typing-text-h1"></span></h1>
+                <h1>
+                    <span class="typing-text-h1"></span>
+                    <span class="sr-only">Hello, I'm Kaspar</span>
+                </h1>
                 <p><span class="typing-text-p"></span><span class="cursor">|</span></p>
                 <a href="#projects" class="scroll-hint"><i class="fa-solid fa-angle-down"></i></a>
             </div>
