@@ -10,7 +10,7 @@
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(2, 80px);
   gap: 10px;
-  padding-top: 160px;
+  padding-top: 200px;
   max-width: fit-content;
   margin: 0 auto;
   justify-content: center;
