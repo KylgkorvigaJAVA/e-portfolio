@@ -11,6 +11,8 @@
     cursor: default;
 }
 
+/* uncomment, when done */
+
 /* .card-container {
     margin-top:200px;
 } */
@@ -130,6 +132,9 @@
 }
 
 @media (max-width:991px) {
+    .card-container {
+        margin-top:0;
+    }
     .card {
         height: 270px;
         flex: 1 1 100%;
@@ -150,6 +155,10 @@
 }
 
 @media (max-width: 768px) {
+    .card-container {
+        margin-top:20px;
+    }
+
     .card {
         height: 500px;
         flex: 1 1 100%;
