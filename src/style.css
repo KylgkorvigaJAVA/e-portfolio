@@ -180,12 +180,14 @@ h2 {
 }
 
 .snap-section {
-    padding: 100px 20px;
+    padding: 20px 20px;
     margin: auto;
-    min-height: 100vh;
+    height: auto;    /* <-- allow it to grow */
+    min-height: 100svh;    /* <-- more accurate for zoom/small screens */
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    overflow-y: auto;
+    overflow: visible;    /* <-- let content flow */
+    position: relative;
 }
 
 .scroll-hint {
@@ -201,8 +203,8 @@ h2 {
 
 .snap-container {
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+    overflow-y: auto;
+    height: 100svh;
     scroll-behavior: smooth;
 }
 
