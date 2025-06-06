@@ -79,6 +79,24 @@
   object-fit: contain;
 }
 
+@media (max-width: 991px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap: 50px;
+  }
+
+  .skill:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .skill-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: repeat(3, 70px);
