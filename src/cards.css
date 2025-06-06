@@ -151,7 +151,7 @@
 
 @media (max-width: 768px) {
     .card {
-        height: 600px;
+        height: 500px;
         flex: 1 1 100%;
     }
 
