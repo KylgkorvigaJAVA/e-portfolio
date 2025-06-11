@@ -11,11 +11,9 @@
     cursor: default;
 }
 
-/* uncomment, when done */
-
-/* .card-container {
-    margin-top:200px;
-} */
+.card-container {
+    margin-top:180px;
+}
 
 .card-front-img {
     width: 100%;
