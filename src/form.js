@@ -1,5 +1,31 @@
+let captchaAnswer;
+
+function generateCaptcha() {
+    const a = Math.floor(Math.random() * 10) + 1;
+    const b = Math.floor(Math.random() * 10) + 1;
+    captchaAnswer = a + b;
+    document.getElementById('captcha-question').textContent = `${a} + ${b}`;
+}
+
+generateCaptcha();
+
 document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
+
+    const form = this;
+
+    const userAnswer = parseInt(form.querySelector('#captcha').value.trim(), 10);
+    if (userAnswer !== captchaAnswer) {
+        showMessage('Incorrect CAPTCHA answer.');
+        generateCaptcha();
+        return;
+    }
+
+    const honeypot = form.querySelector('input[name="_honey"]');
+    if (honeypot && honeypot.value !== "") {
+        showMessage('Bot detected. Submission blocked.');
+        return;
+    }
 
     showLoading();
 
@@ -8,6 +34,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
             hideLoading();
             showMessage('Message sent successfully!');
             this.reset();
+            generateCaptcha();
         }, () => {
             hideLoading();
             showMessage('Failed to send message!');
