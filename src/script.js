@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // === typewriter effect ===
 
     const textH1 = "Hello, I'm Kaspar";
-    const textP = "A software development student seeking for opportunities";
+    const textP = "A software development student seeking opportunities";
 
     const typingElementH1 = document.querySelector(".typing-text-h1");
     const typingElementP = document.querySelector(".typing-text-p");
