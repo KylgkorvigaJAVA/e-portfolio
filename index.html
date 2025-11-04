@@ -1,424 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="src/style.css">
-    <link rel="stylesheet" href="src/cards.css">
-    <link rel="stylesheet" href="src/nav.css">
-    <link rel="stylesheet" href="src/skills.css">
-    <link rel="stylesheet" href="src/copy.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/cards.css" />
+    <link rel="stylesheet" href="src/nav.css" />
+    <link rel="stylesheet" href="src/skills.css" />
+    <link rel="stylesheet" href="src/copy.css" />
     <title>E-Portfolio | Kaspar</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
-        <button class="nav-btn d-lg-none" id="navBtn" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#sideNav">
-            <span class="nav-icon">
-                <span class="line line-1"></span>
-                <span class="line line-2"></span>
-                <span class="line line-3"></span>
-            </span>
-        </button>
-        <!-- MOBILE NAV -->
-        <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="sideNav">
-            <div class="offcanvas-body">
-                <ul class="nav flex-column">
-                    <li>
-                        <a class="nav-link" href="#hero">Welcome</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#about">About Me</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <button
+        class="nav-btn d-lg-none"
+        id="navBtn"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#sideNav"
+      >
+        <span class="nav-icon">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </span>
+      </button>
+      <!-- MOBILE NAV -->
+      <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="sideNav">
+        <div class="offcanvas-body">
+          <ul class="nav flex-column">
+            <li>
+              <a class="nav-link" href="#hero">Welcome</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-        <!-- DESKTOP NAV -->
-        <div class="collapse navbar-collapse justify-content-end mx-3">
-            <ul class="navbar-nav">
-                <li>
-                    <a class="nav-link" href="#hero">Welcome</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#about">About Me</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
+      </div>
+      <!-- DESKTOP NAV -->
+      <div class="collapse navbar-collapse justify-content-end mx-3">
+        <ul class="navbar-nav">
+          <li>
+            <a class="nav-link" href="#hero">Welcome</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <div id="back-to-top">
-        <i class="fa-solid fa-circle-up fa-2xl"></i>
+      <i class="fa-solid fa-circle-up fa-2xl"></i>
     </div>
     <div class="snap-container" data-bs-spy="scroll" data-bs-target="#navbar">
-        <section class="snap-section d-flex align-items-center" id="hero">
-            <div class="container text-start hero-title">
-                <h1>
-                    <span class="typing-text-h1"></span>
-                    <span class="sr-only"></span>
-                </h1>
-                <p><span class="typing-text-p"></span><span class="cursor">|</span></p>
-                <a href="#projects" class="scroll-hint"><i class="fa-solid fa-angle-down"></i></a>
-            </div>
-        </section>
-        <section class="snap-section py-5 bg-second" id="projects">
-            <div class="container">
-                <h1>PROJECTS</h1>
-                <div class="card-container">
-                    <div class="row g-4 mt-4">
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/reklaamitsehh.webp" alt="reklaamitsehh.webp"
-                                                class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>Reklaamitsehh OÜ</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>A simple homepage built as a collaborative side project with a friend.
-                                                Designed and developed in our spare time to practice layout design,
-                                                HTML, CSS, Bootstrap and responsiveness.</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://github.com/KylgkorvigaJAVA/reklaamitsehh_v2"
-                                                target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-                                            <a href="https://reklaamitsehh.ee/" target="_blank"><i
-                                                    class="fa-solid fa-link fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/h2katon.webp" alt="h2katon.webp" class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>School hackathon project</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>A desktop simulation game developed during a one-week hackathon that
-                                                focused on raising cybersecurity awareness. Built in a team where
-                                                my main roles were coming up with the idea, designing the interface and
-                                                building the application.</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://github.com/KylgkorvigaJAVA/e-valve_consulting"
-                                                target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a>
-                                            <a href="https://kylgkorvigajava.github.io/e-valve_consulting/"
-                                                target="_blank"><i class="fa-solid fa-link fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/lopuprojekt.webp" alt="lopuprojekt.webp"
-                                                class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>HTML & CSS final project</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>Built as a final assignment for an HTML/CSS course in school. My first
-                                                real experience with HTML, CSS and Bootstrap.</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://github.com/KylgkorvigaJAVA/L6puprojekt" target="_blank"><i
-                                                    class="fa-brands fa-github fa-2xl"></i></a>
-                                            <a href="https://kylgkorvigajava.github.io/L6puprojekt/"
-                                                target="_blank"><i class="fa-solid fa-link fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/portfolio.webp" alt="portfolio.webp" class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>E-Portfolio</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>This e-portfolio was designed and developed to showcase my projects,
-                                                skills, and experience as a software development student. Built using
-                                                HTML, CSS, Javascript and Bootstrap.</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://github.com/KylgkorvigaJAVA/portfolio" target="_blank"><i
-                                                    class="fa-brands fa-github fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/juhend.webp" alt="juhend.webp" class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>Document formating guide</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>This simple project was created as part of a school assignment
-                                                and serves as a document formatting guide for students.
-                                                Aim was to keep both the page and the code as simple and maintainable as
-                                                possible.
-                                                The project was built using HTML, CSS and Bootstrap.</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://github.com/KylgkorvigaJAVA/Loomeprojekt" target="_blank"><i
-                                                    class="fa-brands fa-github fa-2xl"></i></a>
-                                            <a href="https://kylgkorvigajava.github.io/Loomeprojekt" target="_blank"><i
-                                                    class="fa-solid fa-link fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/oherdi.webp" alt="oherdi.webp" class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>Oherdi Team OÜ</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>A single-page WordPress site built as a group project for a real client.
-                                                I handled design, development, and acted as the creative lead.
-                                                Project uses plugins for SEO, forms and styling.</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://oherditeam.ee/" target="_blank"><i
-                                                    class="fa-solid fa-link fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/figma.webp" alt="figma.webp" class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3>Web design project for school</h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>A mobile-first website design created in Figma as part of a school project. </p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <a href="https://www.figma.com/proto/9hPMSYGcLlddqO06nzMmY6/Klassiprojekt?node-id=15-65&p=f&t=zOSJJxxfxMO8bIFz-1&scaling=scale-down&content-scaling=fixed&page-id=2%3A4&starting-point-node-id=15%3A65" target="_blank"><i
-                                                    class="fa-brands fa-figma fa-2xl"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-inner">
-                                    <div class="card-front bg-darkest">
-                                        <div class="card-front-img">
-                                            <img src="src/img/loading2.gif" alt="loading.gif" class="card-img-top">
-                                        </div>
-                                        <div class="card-front-text">
-                                            <h3><!-- title --></h3>
-                                        </div>
-                                    </div>
-                                    <div class="card-back bg-darkest">
-                                        <button class="card-back-btn"><i class="fa-solid fa-arrow-left"></i></button>
-                                        <div class="card-back-text">
-                                            <p>COMING SOON</p>
-                                        </div>
-                                        <div class="card-back-links">
-                                            <!-- links -->
-                                            <!-- <a href="https://github.com" target="_blank"><i
+      <section class="snap-section d-flex align-items-center" id="hero">
+        <div class="container text-start hero-title">
+          <h1>
+            <span class="typing-text-h1"></span>
+            <span class="sr-only"></span>
+          </h1>
+          <p>
+            <span class="typing-text-p"></span><span class="cursor">|</span>
+          </p>
+          <a href="#projects" class="scroll-hint"
+            ><i class="fa-solid fa-angle-down"></i
+          ></a>
+        </div>
+      </section>
+      <section class="snap-section py-5 bg-second" id="projects">
+        <div class="container">
+          <h1>PROJECTS</h1>
+          <div class="card-container">
+            <div class="row g-4 mt-4">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/reklaamitsehh.webp"
+                          alt="reklaamitsehh.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>Reklaamitsehh OÜ</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          A simple homepage built as a collaborative side
+                          project with a friend. Designed and developed in our
+                          spare time to practice layout design, HTML, CSS,
+                          Bootstrap and responsiveness.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a
+                          href="https://github.com/KylgkorvigaJAVA/reklaamitsehh_v2"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2xl"></i
+                        ></a>
+                        <a href="https://reklaamitsehh.ee/" target="_blank"
+                          ><i class="fa-solid fa-link fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/h2katon.webp"
+                          alt="h2katon.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>School hackathon project</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          A desktop simulation game developed during a one-week
+                          hackathon that focused on raising cybersecurity
+                          awareness. Built in a team where my main roles were
+                          coming up with the idea, designing the interface and
+                          building the application.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a
+                          href="https://github.com/KylgkorvigaJAVA/e-valve_consulting"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2xl"></i
+                        ></a>
+                        <a
+                          href="https://kylgkorvigajava.github.io/e-valve_consulting/"
+                          target="_blank"
+                          ><i class="fa-solid fa-link fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/lopuprojekt.webp"
+                          alt="lopuprojekt.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>HTML & CSS final project</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          Built as a final assignment for an HTML/CSS course in
+                          school. My first real experience with HTML, CSS and
+                          Bootstrap.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a
+                          href="https://github.com/KylgkorvigaJAVA/L6puprojekt"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2xl"></i
+                        ></a>
+                        <a
+                          href="https://kylgkorvigajava.github.io/L6puprojekt/"
+                          target="_blank"
+                          ><i class="fa-solid fa-link fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/portfolio.webp"
+                          alt="portfolio.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>E-Portfolio</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          This e-portfolio was designed and developed to
+                          showcase my projects, skills, and experience as a
+                          software development student. Built using HTML, CSS,
+                          Javascript and Bootstrap.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a
+                          href="https://github.com/KylgkorvigaJAVA/portfolio"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/juhend.webp"
+                          alt="juhend.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>Document formating guide</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          This simple project was created as part of a school
+                          assignment and serves as a document formatting guide
+                          for students. Aim was to keep both the page and the
+                          code as simple and maintainable as possible. The
+                          project was built using HTML, CSS and Bootstrap.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a
+                          href="https://github.com/KylgkorvigaJAVA/Loomeprojekt"
+                          target="_blank"
+                          ><i class="fa-brands fa-github fa-2xl"></i
+                        ></a>
+                        <a
+                          href="https://kylgkorvigajava.github.io/Loomeprojekt"
+                          target="_blank"
+                          ><i class="fa-solid fa-link fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/oherdi.webp"
+                          alt="oherdi.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>Oherdi Team OÜ</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          A single-page WordPress site built as a group project
+                          for a real client. I handled design, development, and
+                          acted as the creative lead. Project uses plugins for
+                          SEO, forms and styling.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a href="https://oherditeam.ee/" target="_blank"
+                          ><i class="fa-solid fa-link fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/figma.webp"
+                          alt="figma.webp"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3>Web design project for school</h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>
+                          A mobile-first website design created in Figma as part
+                          of a school project.
+                        </p>
+                      </div>
+                      <div class="card-back-links">
+                        <a
+                          href="https://www.figma.com/proto/9hPMSYGcLlddqO06nzMmY6/Klassiprojekt?node-id=15-65&p=f&t=zOSJJxxfxMO8bIFz-1&scaling=scale-down&content-scaling=fixed&page-id=2%3A4&starting-point-node-id=15%3A65"
+                          target="_blank"
+                          ><i class="fa-brands fa-figma fa-2xl"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-inner">
+                    <div class="card-front bg-darkest">
+                      <div class="card-front-img">
+                        <img
+                          src="src/img/loading2.gif"
+                          alt="loading.gif"
+                          class="card-img-top"
+                        />
+                      </div>
+                      <div class="card-front-text">
+                        <h3><!-- title --></h3>
+                      </div>
+                    </div>
+                    <div class="card-back bg-darkest">
+                      <button class="card-back-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                      </button>
+                      <div class="card-back-text">
+                        <p>COMING SOON</p>
+                      </div>
+                      <div class="card-back-links">
+                        <!-- links -->
+                        <!-- <a href="https://github.com" target="_blank"><i
                                                     class="fa-brands fa-github fa-2xl"></i></a>
                                             <a href="https://"
                                                 target="_blank"><i class="fa-solid fa-link fa-2xl"></i></a> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-        <section class="snap-section py-5 skills-section" id="skills">
-            <div class="container">
-                <div class="skills-header">
-                    <h1>SKILLS</h1>
-                    <button id="reset-skills" class="nav-link" style="display: none; margin-left: 10px;">
-                        <i class="fa-solid fa-rotate-left fa-xl"></i>
-                    </button>
-                </div>
+          </div>
+        </div>
+      </section>
+      <section class="snap-section py-5 skills-section" id="skills">
+        <div class="container">
+          <div class="skills-header">
+            <h1>SKILLS</h1>
+            <button
+              id="reset-skills"
+              class="nav-link"
+              style="display: none; margin-left: 10px"
+            >
+              <i class="fa-solid fa-rotate-left fa-xl"></i>
+            </button>
+          </div>
+          <div>
+            <div class="skills-grid" id="skills-grid"></div>
+          </div>
+        </div>
+      </section>
+      <section class="snap-section py-5 bg-second" id="about">
+        <div class="container">
+          <h1>ABOUT ME</h1>
+          <div class="about-container row mt-4 align-items-center">
+            <div class="about-img col-lg-5 col-md-6 mb-4 mb-md-0">
+              <img
+                src="./src/img/portrait.webp"
+                alt="Portrait"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="about-text col-lg-7 col-md-6">
+              <h2>My name is Kaspar</h2>
+              <br />
+              <p>
+                I am a software development student with a passion for building
+                creative and practical solutions. I created this portfolio to
+                share some of my work and hopefully connect with someone looking
+                for a motivated intern or junior dev. <br /><br />
+                When i am not behind a keyboard, you'll find me woodworking,
+                playing guitar or somewhere near cars and motorcycles. I'm
+                always curious, always learning and excited to take the next
+                step in my development journey.
+                <br /><br />
+                Thanks for checking out my portfolio and feel free to reach out
+                to me via the contact form below.
+                <a href="#contact" style="color: #38ef7d"
+                  ><i class="fa-solid fa-angle-down"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="snap-section py-5" id="contact">
+        <div class="container">
+          <h1>CONTACT</h1>
+          <div class="contact-container row mt-4 align-items-center">
+            <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+              <div class="contact-info">
+                <h2 class="mb-4">Contact me</h2>
                 <div>
-                    <div class="skills-grid" id="skills-grid"></div>
+                  <p class="copy-item" data-copy="kaspar.viitkar@voco.ee">
+                    <i class="fa-solid fa-envelope"></i> kaspar.viitkar@voco.ee
+                    <span class="copy-tooltip">Click to copy</span>
+                  </p>
                 </div>
-            </div>
-        </section>
-        <section class="snap-section py-5 bg-second" id="about">
-            <div class="container">
-                <h1>ABOUT ME</h1>
-                <div class="about-container row mt-4 align-items-center">
-                    <div class="about-img col-lg-5 col-md-6 mb-4 mb-md-0">
-                        <img src="./src/img/portrait.webp" alt="Portrait" class="img-fluid rounded">
-                    </div>
-                    <div class="about-text col-lg-7 col-md-6">
-                        <h2>My name is Kaspar</h2>
-                        <br>
-                        <p>I am a software development student with a passion for building creative and practical
-                            solutions.
-                            I created this portfolio to share some of my work and hopefully connect with someone looking
-                            for a motivated intern or junior dev.
-                            <br><br>
-                            When i am not behind a keyboard, you'll find me woodworking, playing guitar or somewhere
-                            near cars and motorcycles. I'm always curious, always learning and excited to take the next
-                            step in my development journey.
-                            <br><br>
-                            Thanks for checking out my portfolio and feel free to reach out to me via the contact form
-                            below. <a href="#contact" style="color:#38ef7d"><i class="fa-solid fa-angle-down"></i></a>
-                        </p>
-                    </div>
+                <div class="contact-links">
+                  <a
+                    href="https://www.linkedin.com/in/kaspar-viitkar-534197244/"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin fa-2xl"></i
+                  ></a>
+                  <a href="https://github.com/KylgkorvigaJAVA" target="_blank"
+                    ><i class="fa-brands fa-github fa-2xl"></i
+                  ></a>
+                  <a
+                    href="https://drive.google.com/file/d/1OwyUFjmpUf7qT3w72RTEiyVdL3I2_BjD/view?usp=sharing"
+                    target="_blank"
+                    ><i class="fa-solid fa-file fa-2xl"></i
+                  ></a>
                 </div>
+              </div>
             </div>
-        </section>
-        <section class="snap-section py-5" id="contact">
-            <div class="container">
-                <h1>CONTACT</h1>
-                <div class="contact-container row mt-4 align-items-center">
-                    <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
-                        <div class="contact-info">
-                            <h2 class="mb-4">Contact me</h2>
-                            <div>
-                                <p class="copy-item" data-copy="kaspar.viitkar@voco.ee">
-                                    <i class="fa-solid fa-envelope"></i> kaspar.viitkar@voco.ee
-                                    <span class="copy-tooltip">Click to copy</span>
-                                </p>
-                            </div>
-                            <div class="contact-links">
-                                <a href="https://www.linkedin.com/in/kaspar-viitkar-534197244/" target="_blank"><i
-                                        class="fa-brands fa-linkedin fa-2xl"></i></a>
-                                <a href="https://github.com/KylgkorvigaJAVA" target="_blank"><i
-                                        class="fa-brands fa-github fa-2xl"></i></a>
-                                <a href="https://drive.google.com/file/d/1S43m6fbgdohTsgW-bm5IxaQ-IB-kVRyu/view?usp=sharing"
-                                    target="_blank"><i class="fa-solid fa-file fa-2xl"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form col-lg-6 col-md-6">
-                        <form id="contact-form" style="color: #38ef7d">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" name="from_name" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Your Email</label>
-                                <input type="email" class="form-control" id="email" name="from_email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Your Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required
-                                    style="resize: none;"></textarea>
-                            </div>
-                            <input type="text" name="_honey" style="display:none">
+            <div class="contact-form col-lg-6 col-md-6">
+              <form id="contact-form" style="color: #38ef7d">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="from_name"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="from_email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    style="resize: none"
+                  ></textarea>
+                </div>
+                <input type="text" name="_honey" style="display: none" />
 
-                            <div class="mb-3" style="max-width: 150px;">
-                                <label for="captcha" class="form-label">What is <span
-                                        id="captcha-question"></span>?</label>
-                                <input type="text" class="form-control" id="captcha" name="captcha" required>
-                            </div>
+                <div class="mb-3" style="max-width: 150px">
+                  <label for="captcha" class="form-label"
+                    >What is <span id="captcha-question"></span>?</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="captcha"
+                    name="captcha"
+                    required
+                  />
+                </div>
 
-                            <button type="submit" class="btn btn-send">Send</button>
-                        </form>
-                    </div>
-                </div>
+                <button type="submit" class="btn btn-send">Send</button>
+              </form>
             </div>
-            <footer>
-                <div>
-                    <p class="footer-text">Kaspar 2025<span class="footer-cursor">|</span></p>
-                </div>
-            </footer>
-        </section>
+          </div>
+        </div>
+        <footer>
+          <div>
+            <p class="footer-text">
+              Kaspar 2025<span class="footer-cursor">|</span>
+            </p>
+          </div>
+        </footer>
+      </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script>
-        (function () {
-            emailjs.init('0sx78NiymcpZL-Ajw');
-        })();
+      (function () {
+        emailjs.init("0sx78NiymcpZL-Ajw");
+      })();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
     <script src="src/script.js"></script>
     <script src="src/skills.js"></script>
     <script src="src/form.js"></script>
     <script src="src/copy.js"></script>
-</body>
-
+  </body>
 </html>
