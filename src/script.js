@@ -118,6 +118,14 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(link, { attributes: true, attributeFilter: ['class'] });
     });
 
+    function updateCurrentYear() {
+        const yearElement = document.getElementById('current-year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    }
+
+    updateCurrentYear();
     syncNavLinks();
 
 });
